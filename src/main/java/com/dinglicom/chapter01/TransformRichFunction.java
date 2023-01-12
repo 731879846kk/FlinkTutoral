@@ -26,6 +26,8 @@ public class TransformRichFunction {
         env.execute();
     }
 
+
+    // 富函数，能获取到各种运行上下文信息
     public static class myRichFunction extends RichMapFunction<Event, Integer>{
 
         @Override
