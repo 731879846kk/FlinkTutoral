@@ -46,7 +46,7 @@ public class TopNTest {
 
             // 按照url分组，统计窗口内每个url访问量
          stream.map(data -> data.url)
-                // 开窗，滑动窗口
+                // 开窗，滑动窗口  (效率比较低 并行度是1)
                 .windowAll(SlidingEventTimeWindows.of(Time.seconds(20), Time.seconds(10)))
                 // 做聚合统计
                 .aggregate(new urlHashMapCountAgg(), new urlAllWindowResult())
