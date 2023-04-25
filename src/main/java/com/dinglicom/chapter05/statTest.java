@@ -1,6 +1,5 @@
 package com.dinglicom.chapter05;
 
-import akka.stream.impl.ReducerState;
 import com.dinglicom.chapter01.Event;
 import com.dinglicom.chapter01.clickSource;
 import org.apache.flink.api.common.eventtime.SerializableTimestampAssigner;
@@ -80,6 +79,7 @@ public class statTest {
 
             myValueStat.update(value);
             myListState.add(value);
+
             System.out.println("my value"+myValueStat.value());
         }
     }
