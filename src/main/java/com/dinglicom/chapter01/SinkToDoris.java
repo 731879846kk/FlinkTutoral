@@ -8,9 +8,9 @@ import org.apache.flink.streaming.api.functions.sink.SinkFunction;
 
 import java.util.Properties;
 
-public class SinkToDoris {
+public class SinkToDoris  {
 
-    public SinkFunction<String> MySinkDoris(String dbName,String tablename){
+    public SinkFunction<String> MySinkDoris(String dbName, String tablename){
         Properties pro = new Properties();
         pro.setProperty("format", "json");
         pro.setProperty("strip_outer_array", "true");
